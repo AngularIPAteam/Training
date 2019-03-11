@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { SearchOperationsComponent } from './components/search-operations/search-operations.component';
 import { ResultTableComponent } from './components/result-table/result-table.component';
 import { DetailResultComponent } from './components/detail-result/detail-result.component';
+import { MoreDetailsComponent } from './components/more-details/more-details.component';
+import { ActivityDetailsComponent } from './components/activity-details/activity-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchOperationsComponent,
     ResultTableComponent,
-    DetailResultComponent
+    DetailResultComponent,
+    MoreDetailsComponent,
+    ActivityDetailsComponent
   ],
   imports: [
     BrowserModule,
