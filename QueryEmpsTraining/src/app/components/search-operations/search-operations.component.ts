@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, ElementRef, ViewChild , EventEmitter} from '@angular/core';
+import {SearchResultModel} from '../../Models/search-result.model';
+import { CustomHttpRequestService } from '../../services/custom-http-request.service';
 
 @Component({
   selector: 'app-search-operations',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchOperationsComponent implements OnInit {
 
-  constructor() { }
+  private searchResultUrl : string = '';
+  @Output('searchResult') searchResultsModel = new EventEmitter<SearchResultModel []>();
 
-  ngOnInit() {
+  @ViewChild('aljadarhType') aljadarhType: ElementRef;
+  @ViewChild('aljadarhName') aljadarhName: ElementRef;
+  @ViewChild('activtyType') activtyType: ElementRef;
+  @ViewChild('executingAgency') executingAgency: ElementRef;
+  @ViewChild('sector') sector: ElementRef;
+  @ViewChild('domain') domain: ElementRef;
+  @ViewChild('country') country: ElementRef;
+  @ViewChild('city') city: ElementRef;
+  @ViewChild('startDate') startDate: ElementRef;
+  @ViewChild('activtyTrainingName') activtyTrainingName: ElementRef;
+
+  constructor(private httpRequest: CustomHttpRequestService) { }
+
+  ngOnInit() {}
+
+  /**
+   * @description Return search Results 
+   */
+  getSearchResult(){
+    const filterObject = {
+
+    };
+
+    this.httpRequest.post(this.searchResultUrl,filterObject).subscribe((searchResults:  SearchResultModel []) =>{
+      this.searchResultsModel.emit(searchResults);
+    });
   }
-
 }

@@ -7,7 +7,7 @@
 
     </div>
     <br>
-    <app-search-operations></app-search-operations></div>
+    <app-search-operations (searchResult)="disaplySearchResults($event)"></app-search-operations></div>
   </div>
   <br>
 <div class="container">
@@ -17,7 +17,7 @@
 
       </div>
       <br>
-      <app-result-table></app-result-table></div>
+      <app-result-table [resultTable]="searchResults"></app-result-table></div>
 </div>
 <div class="container"><app-detail-result></app-detail-result></div>
 <div class="container-fluid"></div>

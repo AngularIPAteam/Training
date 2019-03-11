@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {SearchResultModel} from './Models/search-result.model';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'QueryEmpsTraining';
+
+  searchResults : SearchResultModel[];
+
+  disaplySearchResults(searchResults: SearchResultModel []){
+    this.searchResults = searchResults;
+  }
+
 }

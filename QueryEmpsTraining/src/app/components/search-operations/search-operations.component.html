@@ -4,31 +4,31 @@
       <div class="col-6">
         <div class="form-group row">
           <label class="my-auto">نوع الجدارة :</label>
-          <select class="form-control col-4 mx-4">
-            <option>1</option>
+          <select class="form-control col-4 mx-4" #aljadarhType>
+            <option >1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">اسم الجدارة :</label>
-          <select class="form-control col-4 mx-4" >
+          <select class="form-control col-4 mx-4" #aljadarhName>
             <option>1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">نوع النشاط :</label>
-          <select class="form-control col-4 mx-4">
+          <select class="form-control col-4 mx-4" #activtyType>
             <option>1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">الجهة المنفذة :</label>
-            <select class="form-control col-4 mx-2">
+            <select class="form-control col-4 mx-2" #executingAgency>
             <option>1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">القطاع :</label>
-            <select class="form-control col-4 mx-5">
+            <select class="form-control col-4 mx-5" #sector>
             <option>1</option>
           </select>
         </div>
@@ -36,31 +36,31 @@
       <div class="col-6">
         <div class="form-group row">
             <label class="my-auto">المجال :</label>
-            <select class="form-control col-4 mx-4">
+            <select class="form-control col-4 mx-4" #domain>
             <option>1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">الدولة :</label>
-            <select class="form-control col-4 mx-4">
+            <select class="form-control col-4 mx-4" #country>
             <option>1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">المدينة :</label>
-            <select class="form-control col-4 mx-4">
+            <select class="form-control col-4 mx-4" #city>
             <option>1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">تاريخ البداية بعد :</label>
-            <select class="form-control col-4 mx-4">
+            <select class="form-control col-4 mx-4" #startDate>
             <option >1</option>
           </select>
         </div>
         <div class="form-group row">
             <label class="my-auto">اسم النشاط التدريبي :</label>
-            <select class="form-control col-4 mx-4">
+            <select class="form-control col-4 mx-4" #activtyTrainingName>
             <option>1</option>
           </select>
         </div>
@@ -68,6 +68,6 @@
     </div>
   </div>
   <div class="container-fluid" style="float: right">
-    <button type="button" class="btn default-color"  >  استعلام  <i class="fas fa-search"></i></button>
+    <button type="button" class="btn default-color"  (click)="getSearchResult()">  استعلام  <i class="fas fa-search"></i></button>
   </div>
 </form>
