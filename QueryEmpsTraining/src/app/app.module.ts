@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { SearchOperationsComponent } from './components/search-operations/search-operations.component';
 import { ResultTableComponent } from './components/result-table/result-table.component';
 import { DetailResultComponent } from './components/detail-result/detail-result.component';
+import { TargetJadarhComponent } from './components/target-jadarh/target-jadarh.component';
+import { TrainingTableComponent } from './components/training-table/training-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchOperationsComponent,
     ResultTableComponent,
-    DetailResultComponent
+    DetailResultComponent,
+    TargetJadarhComponent,
+    TrainingTableComponent
   ],
   imports: [
     BrowserModule,

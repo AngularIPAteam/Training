@@ -1,21 +1,118 @@
 
+
   <!-- Modal -->
-  <div class="modal fade right" id="detailResultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <div class="modal fade bd-example-modal-lg" id="detailResultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" >
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalPreviewLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+        
+
+        <div class="card grey lighten-5">
+            <div class="card-header  default-color text-white" style="text-align: right">
+              <h5><i class="fa fa-file"></i> تفاصيل النشاط</h5>
+        
+            </div>
         <div class="modal-body">
-          ...
+            <div class="container">
+                <div style="background-color:rgba(240, 243, 211, 0.685)" class="form-group row col-15" >
+                    <label >اسم النشاط التدريبي </label>
+                    
+                      
+                     
+                  </div>
+                <div class="container  row col">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group row col-12">
+                      <label class="my-auto col-10 col-md-4">اسم الجهة </label>
+                      
+                        
+                       
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-11 col-md-4">مقر الجهة</label>
+                      
+                        
+                       
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-4">البريد الالكتروني</label>
+                     
+                        
+                       
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-4">الانترنت</label>
+                        
+                        
+                       
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-4">القطاع </label>
+                       
+                        
+                    </div>
+                    <div class="form-group row col-12">
+                      <label class="my-auto col-10 col-md-4">المدة </label>
+                     
+                      
+                  </div>
+                  <div class="form-group row col-12">
+                    <label class="my-auto col-10 col-md-4">لغة النشاط </label>
+                   
+                    
+                </div>
+                  </div>
+                  <div class="col-12 col-md-5">
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-7">رمزها</label>
+                        
+                       
+                      
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-7">Tel</label>
+                        
+                       
+                      
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-7">المجال </label>
+                       
+                        
+                       
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-7">مكان التنفيذ</label>
+                        
+                         
+                       
+                    </div>
+                    <div class="form-group row col-12">
+                        <label class="my-auto col-10 col-md-7">التكلفة</label>
+                       
+                        
+                       
+                    </div>
+                 
+                  <div class="form-group row col-12">
+                      <label class="my-auto col-10 col-md-7">آخر موعد لاوراق العمل (البحث)</label>
+                     
+                      
+                     
+                  </div>
+       
+                  </div>
+                </div>
+              </div>
+                    
+              <!-- Modal -->
+              <div class="container">
+                  <div style="font-family:courier"class="form-group row col-15" >
+                      <label >الجدارة المستهدفة من النظام </label>
+              <div class="container"><app-target-jadarh></app-target-jadarh></div>
+              <div class="container"> <app-training-table></app-training-table></div>
+             
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" [disabled]="disabledButton">طباعة</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">رجوع</button>
-        </div>
+      
       </div>
     </div>
   </div>
