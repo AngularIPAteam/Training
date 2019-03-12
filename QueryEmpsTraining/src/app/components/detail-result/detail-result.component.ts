@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailResultComponent implements OnInit {
 
+  disabledButton  = true;
   constructor() { }
 
   ngOnInit() {
