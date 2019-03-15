@@ -10,10 +10,16 @@ import {SearchResultModel} from './Models/search-result.model';
 export class AppComponent {
   title = 'QueryEmpsTraining';
 
-  searchResults : SearchResultModel[];
+  searchResults: SearchResultModel[];
+  searchResult: SearchResultModel;
 
   disaplySearchResults(searchResults: SearchResultModel []){
     this.searchResults = searchResults;
+  }
+
+  setSearchResult(searchResult: SearchResultModel){
+    this.searchResult = searchResult;
+    console.log(searchResult);
   }
 
 }
