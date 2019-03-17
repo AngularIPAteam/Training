@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomHttpRequestService {
 
-  private baseUrl: string = '';
+  private baseUrl: string = 'http://127.0.0.1:7101/';
 
   constructor(public httpClient: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class CustomHttpRequestService {
    */
   public get(endpointUrl: string): Observable<any> {
     let httpHeaders = new HttpHeaders();
-    return this.httpClient.get<any>(this.baseUrl + endpointUrl, { headers: httpHeaders });
+    return this.httpClient.get<any>(this.baseUrl + endpointUrl);
   }
 
   /** @description Executes a post request and returns the response.

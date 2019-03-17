@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, ElementRef, ViewChild , EventEmitter} from '@angular/core';
 import {SearchResultModel} from '../../Models/search-result.model';
 import { CustomHttpRequestService } from '../../services/custom-http-request.service';
+import { log } from 'util';
 
 @Component({
   selector: 'app-search-operations',
@@ -9,7 +10,7 @@ import { CustomHttpRequestService } from '../../services/custom-http-request.ser
 })
 export class SearchOperationsComponent implements OnInit {
 
-  private searchResultUrl : string = '';
+  private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV';
   @Output('searchResult') searchResultsModel = new EventEmitter<SearchResultModel []>();
 
   @ViewChild('aljadarhType') aljadarhType: ElementRef;
@@ -31,12 +32,9 @@ export class SearchOperationsComponent implements OnInit {
    * @description Return search Results 
    */
   getSearchResult(){
-    const filterObject = {
-
-    };
-
-    this.httpRequest.post(this.searchResultUrl,filterObject).subscribe((searchResults:  SearchResultModel []) =>{
+    this.httpRequest.get(this.searchResultUrl).subscribe((searchResults) =>{
       this.searchResultsModel.emit(searchResults);
+      // console.log(this.searchResultsModel)
     });
   }
 }
