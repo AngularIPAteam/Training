@@ -7,7 +7,7 @@
 
     </div>
     <br>
-    <app-search-operations (searchResult)="disaplySearchResults($event)"></app-search-operations></div>
+    <app-search-operations (searchResults)="disaplySearchResults($event)" ></app-search-operations></div>
   </div>
   <br>
 <div class="container">
@@ -17,8 +17,8 @@
 
       </div>
       <br>
-      <app-result-table [resultTable]="searchResults"></app-result-table></div>
+      <app-result-table [resultTable]="searchResults" (serarchResult)="setSearchResult($event)"></app-result-table></div>
 </div>
-<div class="container"><app-detail-result></app-detail-result></div>
+<div class="container"><app-detail-result *ngIf="searchResult" [detailResult]="searchResult"></app-detail-result></div>
 <div class="container-fluid"></div>
 <router-outlet></router-outlet>

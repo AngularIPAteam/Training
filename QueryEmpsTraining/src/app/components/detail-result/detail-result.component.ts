@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {SearchResultModel} from '../../Models/search-result.model';
+
+
 
 @Component({
   selector: 'app-detail-result',
@@ -8,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class DetailResultComponent implements OnInit {
 
   disabledButton  = true;
+  @Input('detailResult') detailResult: SearchResultModel;
+
   constructor() { }
 
   ngOnInit() {
   }
-
+  
 }

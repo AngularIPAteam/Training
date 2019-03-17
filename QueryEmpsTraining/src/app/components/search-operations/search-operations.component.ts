@@ -32,7 +32,7 @@ export class SearchOperationsComponent implements OnInit {
    * @description Return search Results 
    */
   getSearchResult(){
-    this.httpRequest.get(this.searchResultUrl).subscribe((searchResults) =>{
+    this.httpRequest.get(this.searchResultUrl).subscribe((searchResults:  SearchResultModel []) =>{
       this.searchResultsModel.emit(searchResults);
       // console.log(this.searchResultsModel)
     });
