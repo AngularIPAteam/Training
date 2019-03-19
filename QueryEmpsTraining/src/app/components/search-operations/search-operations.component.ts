@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, ElementRef, ViewChild , EventEmitter} from '@angular/core';
 import {SearchResultModel} from '../../Models/search-result.model';
 import { CustomHttpRequestService } from '../../services/custom-http-request.service';
-import { log } from 'util';
 
 @Component({
   selector: 'app-search-operations',
