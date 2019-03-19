@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomHttpRequestService {
 
-  private baseUrl: string = 'http://127.0.0.1:7101/';
+  private baseUrl: string = 'http://ho-attasam:1024/';
 
   constructor(public httpClient: HttpClient) { }
 

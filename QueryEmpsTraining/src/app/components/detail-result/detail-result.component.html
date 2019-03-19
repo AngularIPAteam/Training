@@ -25,30 +25,35 @@
                   <div class="col-12 col-md-6">
                     <div class="form-group row col-12">
                       <label class="my-auto col-12 col-md-6">اسم الجهة </label>
+                      <label>{{detailResult.Field}}</label>
 
 
 
                     </div>
                     <div class="form-group row col-12">
                       <label class="my-auto col-12 col-md-6">مقر الجهة</label>
+                      <label>{{detailResult.Country}}</label>
 
 
 
                     </div>
                     <div class="form-group row col-12">
                       <label class="my-auto col-12 col-md-6">البريد الالكتروني</label>
+                      <label>{{detailResult.Place}}</label>
 
 
 
                     </div>
                     <div class="form-group row col-12">
                       <label class="my-auto col-12 col-md-6">الانترنت</label>
+                      <label>{{detailResult.ActivLang}}</label>
 
 
 
                     </div>
                     <div class="form-group row col-12">
                       <label class="my-auto col-12 col-md-6">القطاع </label>
+                      <label>{{detailResult.Field}}</label>
 
 
                     </div>
@@ -118,10 +123,10 @@
             </div>
             <div class="card-body green lighten-5">
               <div class="container">
-                <app-target-jadarh></app-target-jadarh>
+                <app-target-jadarh [resulttargetjadarh]="detailResult" ></app-target-jadarh>
               </div>
               <div class="container">
-                <app-training-table></app-training-table>
+                <app-training-table [detailResulttable]="detailResult"></app-training-table>
               </div>
             </div>
           </div>

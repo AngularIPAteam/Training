@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import {SearchResultModel} from '../../Models/search-result.model';
 
 @Component({
   selector: 'app-target-jadarh',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./target-jadarh.component.scss']
 })
 export class TargetJadarhComponent implements OnInit {
+
+  @Input('resulttargetjadarh') detailResult: SearchResultModel;
 
   constructor() { }
 

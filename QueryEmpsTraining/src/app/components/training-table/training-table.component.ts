@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
+import {SearchResultModel} from '../../Models/search-result.model';
 
 @Component({
   selector: 'app-training-table',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./training-table.component.scss']
 })
 export class TrainingTableComponent implements OnInit {
+
+  @Input('detailResulttable') detailResult: SearchResultModel;
 
   constructor() { }
 

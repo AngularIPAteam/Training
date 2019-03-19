@@ -14,15 +14,15 @@
     </thead>
     <!--Table head-->
     <!--Table body-->
-    <tbody>
-      <tr>
-        <td>Mark</td>
+    <tbody >
+      <tr *ngFor="let result of searchResults">
+        <td>{{result.CourseName}}</td>
+        <td>{{result.Duration}}</td>
+        <td>{{result.Currency}}</td>
+        <td>{{result.ExCurrency}}</td>
+        <td>{{result.CityLang}}</td>
         <td>Otto</td>
-        <td>@mdo</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td><button data-toggle="modal" data-target="#detailResultModal" type="button" class="btn default-color px-4 py-1" (click)="displayDetails(item.id)">تفاصيل <i class="fas fa-bars"></i></button></td>
+        <td><button data-toggle="modal" data-target="#detailResultModal" type="button" class="btn default-color px-4 py-1" (click)="displayDetails(result.CourseCode)">تفاصيل <i class="fas fa-bars"></i></button></td>
       </tr>
     </tbody>
     <!--Table body-->

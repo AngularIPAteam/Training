@@ -10,7 +10,7 @@ import { CustomHttpRequestService } from '../../services/custom-http-request.ser
 })
 export class ResultTableComponent implements OnInit {
 
-  private searchResultUrl : string = '';
+  private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV/';
 
   @Input('resultTable') searchResults: SearchResultModel [];
   @Output('serarchResult') serarchResult = new EventEmitter<any>();
@@ -18,11 +18,12 @@ export class ResultTableComponent implements OnInit {
   constructor(private httpRequest: CustomHttpRequestService) { }
 
   ngOnInit() {
+  
   }
 
-  displayDetails(id: number) {
-    console.log(id);
-    this.httpRequest.get(this.searchResultUrl).subscribe((serarchResult: SearchResultModel) => {
+  displayDetails(CourseCode: number) {
+    console.log(CourseCode);
+    this.httpRequest.get(this.searchResultUrl + CourseCode).subscribe((serarchResult: SearchResultModel) => {
       this.serarchResult.emit(serarchResult);
     });
   }
