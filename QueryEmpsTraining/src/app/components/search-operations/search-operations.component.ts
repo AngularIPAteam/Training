@@ -9,7 +9,7 @@ import { CustomHttpRequestService } from '../../services/custom-http-request.ser
 })
 export class SearchOperationsComponent implements OnInit {
 
-  private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV';
+  private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV?limit=10&offset=0';
   @Output('searchResults') searchResultsModel = new EventEmitter<SearchResultModel []>();
 
   @ViewChild('aljadarhType') aljadarhType: ElementRef;
