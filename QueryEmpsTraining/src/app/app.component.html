@@ -10,7 +10,7 @@
     <app-search-operations (searchResults)="disaplySearchResults($event)" ></app-search-operations></div>
   </div>
   <br>
-<div class="container">
+<div *ngIf="hidDiv" class="container">
     <div class="card grey lighten-5">
       <div class="card-header default-color text-white" style="text-align: right">
         <h4><i class="fas fa-money-check"></i> النتائج</h4>

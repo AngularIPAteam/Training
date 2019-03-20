@@ -12,9 +12,11 @@ export class AppComponent {
 
   searchResults: SearchResultModel[];
   searchResult: SearchResultModel;
+  hidDiv=false;
 
   disaplySearchResults(searchResults: SearchResultModel []){
     this.searchResults = searchResults;
+    this.hidDiv=JSON.parse(sessionStorage.getItem('hidDiv'))
   }
 
   setSearchResult(searchResult: SearchResultModel){

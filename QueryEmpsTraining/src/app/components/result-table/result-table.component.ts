@@ -11,14 +11,14 @@ import { CustomHttpRequestService } from '../../services/custom-http-request.ser
 export class ResultTableComponent implements OnInit {
 
   private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV/';
-
+  
   @Input('resultTable') searchResults: SearchResultModel [];
   @Output('serarchResult') serarchResult = new EventEmitter<any>();
 
   constructor(private httpRequest: CustomHttpRequestService) { }
 
   ngOnInit() {
-  
+    
   }
 
   displayDetails(CourseCode: number) {

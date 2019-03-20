@@ -9,7 +9,8 @@ import { CustomHttpRequestService } from '../../services/custom-http-request.ser
 })
 export class SearchOperationsComponent implements OnInit {
 
-  private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV?limit=10&offset=0';
+  private searchResultUrl : string = 'TrainingRest-RESTWebService-context-root/rest/v0/SOV?limit=5&offset=1';
+  hidDiv=true;
   @Output('searchResults') searchResultsModel = new EventEmitter<SearchResultModel []>();
 
   @ViewChild('aljadarhType') aljadarhType: ElementRef;
@@ -33,7 +34,8 @@ export class SearchOperationsComponent implements OnInit {
   getSearchResult(){
     this.httpRequest.get(this.searchResultUrl).subscribe((searchResults:  SearchResultModel []) =>{
       this.searchResultsModel.emit(searchResults['items']);
-      console.log(searchResults)
+      console.log(searchResults);
+      sessionStorage.setItem('hidDiv', JSON.stringify(this.hidDiv));
     });
   }
 }
